@@ -39,6 +39,7 @@ body {
     height: $minute-hand-length;
     background-color: $minute-hand-bgc;
     transform-origin: center bottom;
+    animation: rotate-clock 3600s steps(60, end) infinite;
   }
 
   &__seconds-hand {
@@ -48,6 +49,7 @@ body {
     height: $second-hand-length;
     background-color: $second-hand-bgc;
     transform-origin: center bottom;
+    animation: rotate-clock 60s linear infinite;
   }
 
   &__center {
@@ -62,11 +64,11 @@ body {
   }
 
   &--speed-up .stopwatch__minutes-hand {
-    animation: rotate-clock 3600s steps(60, end) infinite;
+    animation-duration: 600s;
   }
 
   &--speed-up .stopwatch__seconds-hand {
-    animation: rotate-clock 60s linear infinite;
+    animation-duration: 10s;
   }
 }
 
